@@ -1,7 +1,9 @@
 <div class="container">
+<h1>Lists</h1>
+<%= link_to 'New List', new_list_path %>
   <% @lists.each do |list|  %>
     <div class="card">
-      <%# <img src="http://source.unsplash.com/featured/?movie&<%= rand(50) %>)"/> %>
+      <%# <img src="http://source.unsplash.com/featured/?movie&<%= rand(50))"/> %> %>
       <div class="card-info">
         <h2><%= link_to list.name, list_path(list)%></h2>
       </div>
