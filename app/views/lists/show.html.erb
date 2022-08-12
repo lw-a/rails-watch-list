@@ -10,7 +10,7 @@
       <div class="card-product">
         <%= image_tag bookmark.movie.poster_url, alt: "movie", width: 200, height: 300 %>
         <div class="card-product-infos">
-          <h2><%= bookmark.movie.title %></h2>
+          <h2><strong><%= bookmark.movie.title %></strong></h2>
           <p><%= bookmark.movie.overview %> (<%= bookmark.movie.rating %>)</p>
           <p><strong>Comment: </strong><%= bookmark.comment %> <%= link_to bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Do you want to delete #{bookmark.movie.title} from the list?"} do %>
               <i class="fa-solid fa-trash-can"></i>
