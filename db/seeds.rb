@@ -1,9 +1,8 @@
 require 'open-uri'
 
-puts "Clearing db"
+# puts "Clearing db"
 
-Movie.destroy_all
-# List.destroy_all
+# Movie.destroy_all
 
 # the Le Wagon copy of the API
 url = 'http://tmdb.lewagon.com/movie/top_rated'
