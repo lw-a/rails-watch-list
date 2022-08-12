@@ -1,11 +1,12 @@
-<div class="container">
-  <h1>Lists</h1>
-  <%= link_to 'New List', new_list_path, { class: 'btn btn-primary' }%>
+<h1>Movie Lists</h1>
+<%= link_to 'New List', new_list_path, { class: 'btn btn-primary' }%>
+<div class="cards">
   <% @lists.each do |list|  %>
-    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313__340.jpg'%>)">
-      <%# <div class="card-info"> %>
-      <h2><%= link_to list.name, list_path(list), { class: 'btn btn-success' }%></h2>
-      <%# </div> %>
-    </div>
+    <%= link_to list_path(list) do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : 'https://cdn.pixabay.com/photo/2016/12/13/05/15/puppy-1903313__340.jpg'%>)">
+        <h2><%= list.name %></h2>
+      </div>
+    <% end %>
+    <%# </div> %>
   <% end %>
-</div>
+  <%# list.name,  %>
